@@ -12,7 +12,7 @@ def load_data():
     w_df = pd.DataFrame(w.data, columns=w.feature_names)
     w_df["Winetype"] = [w.target_names[t] for t in w.target]
     mapping = {0: "class_0", 1: "class_1", 2: "class_2"}
-    w_df["winetype"] = w_df["winetype"].map(mapping)
+    w_df["Winetype"] = w_df["Winetype"].map(mapping)
     return w_df
 
 def dataFunction(w_df):

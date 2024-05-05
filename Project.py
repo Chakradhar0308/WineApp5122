@@ -12,7 +12,7 @@ def mainFunction():
     df = pd.DataFrame(wine_data.data, columns=wine_data.feature_names)
     df['Winetype'] = wine_data.target
     mapping = {0: "class_0", 1: "class_1", 2: "class_2"}
-    df["winetype"] = df["winetype"].map(mapping)
+    df["Winetype"] = df["Winetype"].map(mapping)
     st.write(df)
     st.title(":Red[Wine Dataset] :green[Analysis] :tea: :coffee: :chart: :bar_chart:")
     st.markdown("Exploring the correlation between the componenets used in crafting different categories of Wines")

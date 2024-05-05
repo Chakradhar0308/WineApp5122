@@ -7,9 +7,9 @@ import altair as alt
 def load_data():
     file = load_wine()
     df = pd.DataFrame(file.data, columns=file.feature_names)
-    df['wine_type'] = [file.target_names[i] for i in file.target]
+    df['Wine_type'] = [file.target_names[i] for i in file.target]
     mapping = {0: "class_0", 1: "class_1", 2: "class_2"}
-    df["winetype"] = df["winetype"].map(mapping)
+    df["Winetype"] = df["Winetype"].map(mapping)
     return df
 
 # Load the data
