@@ -27,8 +27,8 @@ def scatter(data, x, y):
     chart = alt.Chart(data).mark_circle(size=60).encode(
         x=x,
         y=y,
-        color='wine_type',
-        tooltip=[x, y, 'wine_type']
+        color='Winetype',
+        tooltip=[x, y, 'Winetype']
     ).interactive().properties(
         width=600,
         height=400
