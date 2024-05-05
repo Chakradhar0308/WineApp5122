@@ -13,7 +13,7 @@ def load_data():
     return df
 
 # Load the data
-#df = load_data()
+
 
 def hist(data, column):
     chart = alt.Chart(data).mark_bar().encode(
@@ -72,10 +72,10 @@ def combi(data, bar_col, line_col):
 
     st.altair_chart(chart)
 def graphFunction(df):
-     
+    
+    df = load_data()
     # Sidebar for user input
     st.header('Wine Dataset Visualization')
-    st.write('heree')
     chart_type = st.selectbox(
         'Select Chart Type',
         ['Histogram', 'Scatter Plot', 'Pie Chart', 'Donut Chart', 'Combination Chart']
