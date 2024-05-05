@@ -10,7 +10,7 @@ import average,datas,graph
 def mainFunction():
     wine_data = load_wine()
     df = pd.DataFrame(wine_data.data, columns=wine_data.feature_names)
-    df['target'] = wine_data.target
+    df['Winetype'] = wine_data.target
     st.write(df)
     st.title(":Red[Wine Dataset] :green[Analysis] :tea: :coffee: :chart: :bar_chart:")
     st.markdown("Exploring the correlation between the componenets used in crafting different categories of Wines")
