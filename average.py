@@ -3,14 +3,14 @@ from sklearn.datasets import load_wine
 import pandas as pd
 
 @st.cache_data
-def data_load(): ## Dataset
+def data_load(w_df): ## Dataset
     w = load_wine()
-    w_df = pd.DataFrame(w.data, columns=w.feature_names) 
+    #w_df = pd.DataFrame(w.data, columns=w.feature_names) 
     w_df["WineType"] = [w.target_names[t] for t in w.target]
     return w_df
 
-def avgFubction():
-    w_df = data_load()
+def avgFubction(w_df):
+    w_df = data_load(w_df)
     ingredients = w_df.drop(columns=["WineType"]).columns
 
     avg_wine_df = w_df.groupby("WineType").mean().reset_index() ## Avg Ingredients.

@@ -11,7 +11,7 @@ def load_data():
     return df
 
 # Load the data
-df = load_data()
+#df = load_data()
 
 def hist(data, column):
     chart = alt.Chart(data).mark_bar().encode(
@@ -69,8 +69,8 @@ def combi(data, bar_col, line_col):
     ).properties(width=600, height=400)
 
     st.altair_chart(chart)
-def graphFunction():
-        
+def graphFunction(df):
+     
     # Sidebar for user input
     st.header('Wine Dataset Visualization')
     st.write('heree')

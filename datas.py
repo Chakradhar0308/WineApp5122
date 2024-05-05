@@ -13,9 +13,9 @@ def load_data():
     w_df["Winetype"] = [w.target_names[t] for t in w.target]
     return w_df
 
-def dataFunction():
+def dataFunction(w_df):
         # Load data
-    w_df = load_data()
+    #w_df = load_data()
     st.header("Wine Dataset Overview")
     st.dataframe(w_df)
     
