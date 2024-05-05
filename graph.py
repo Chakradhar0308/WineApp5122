@@ -73,6 +73,7 @@ def graphFunction():
         
     # Sidebar for user input
     st.header('Wine Dataset Visualization')
+    st.write('heree')
     chart_type = st.selectbox(
         'Select Chart Type',
         ['Histogram', 'Scatter Plot', 'Pie Chart', 'Donut Chart', 'Combination Chart']
